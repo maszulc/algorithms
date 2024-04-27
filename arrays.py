@@ -5,8 +5,9 @@ class Arrays:
         Given an integer array nums:
          - return true if any value appears at least twice in the array,
          - return false if every element is distinct.
-        :param nums:
-        :return boolean:
+        Checks for duplicates using count() list method
+        :param: array of integers
+        :return: True or False
         """
         x: int
         for x in nums:
@@ -17,9 +18,12 @@ class Arrays:
     @staticmethod
     def contains_duplicate2(nums: list[int]) -> bool:
         """
+        Given an integer array nums:
+         - return true if any value appears at least twice in the array,
+         - return false if every element is distinct.
         Checks duplicates in array by leveraging a hashset
-        :param nums:
-        :return:
+        :param: array of integers
+        :return: True or False
         """
         hashset: set[int] = set()
         for x in nums:
