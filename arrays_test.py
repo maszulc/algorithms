@@ -18,3 +18,9 @@ def test_contains_duplicate1_expect_false(nums):
 def test_contains_duplicate2_expect_false(negative, positive):
     assert Arrays.contains_duplicate2(negative) is False
     assert Arrays.contains_duplicate2(positive)
+
+
+def test_two_sum():
+    nums = [2, 7, 11, 15]
+    target = 9
+    assert Arrays.two_sum(nums, target) == [0, 1]

@@ -31,3 +31,13 @@ class Arrays:
                 return True
             hashset.add(x)
         return False
+
+    @staticmethod
+    def two_sum(nums: list[int], target: int) -> list[int]:
+        value_index_map: dict = dict()
+        for index, value in enumerate(nums):
+            difference = target - value
+            if difference in value_index_map.keys():
+                return [value_index_map[difference], index]
+            value_index_map[value] = index
+        return []
