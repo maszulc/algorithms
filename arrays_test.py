@@ -24,3 +24,11 @@ def test_two_sum():
     nums = [2, 7, 11, 15]
     target = 9
     assert Arrays.two_sum(nums, target) == [0, 1]
+
+
+def test_group_anagrams():
+    input_string_list = ["eat", "tea", "tan", "ate", "nat", "bat", "eta"]
+    expected_output = [["bat"], ["nat", "tan"], ["ate", "eat", "eta", "tea"]]
+    output = Arrays.group_anagrams(input_string_list)
+    for group in output:
+        assert sorted(group) in expected_output

@@ -1,3 +1,6 @@
+from collections import defaultdict
+
+
 class Arrays:
     @staticmethod
     def contains_duplicate1(nums: list[int]) -> bool:
@@ -41,3 +44,16 @@ class Arrays:
                 return [value_index_map[difference], index]
             value_index_map[value] = index
         return []
+
+    @staticmethod
+    def group_anagrams(strs: list[str]) -> list[list[str]]:
+        anagram_hashmap = defaultdict(list)
+        results: list[list[str]] = []
+        for s in strs:
+            ss = tuple(sorted(s))
+            anagram_hashmap[ss].append(s)
+
+        for anagram_group in anagram_hashmap.values():
+            results.append(anagram_group)
+
+        return results
