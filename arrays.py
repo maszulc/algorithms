@@ -57,3 +57,7 @@ class Arrays:
             results.append(anagram_group)
 
         return results
+
+    @staticmethod
+    def is_anagram(s: str, t: str) -> bool:
+        return sorted(s.replace(" ", "")) == sorted(t.replace(" ", ""))

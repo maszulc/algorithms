@@ -32,3 +32,13 @@ def test_group_anagrams():
     output = Arrays.group_anagrams(input_string_list)
     for group in output:
         assert sorted(group) in expected_output
+
+
+@pytest.mark.parametrize("str1, str2", (("anagram", "nagaram"), ("cart horse", "orchestra")))
+def test_is_anagram(str1, str2):
+    assert Arrays.is_anagram(str1, str2)
+
+
+@pytest.mark.parametrize("str1, str2", (("first", "third"), ("test", "tttest")))
+def test_not_anagram(str1, str2):
+    assert not Arrays.is_anagram(str1, str2)
